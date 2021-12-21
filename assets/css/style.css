@@ -452,7 +452,7 @@ input:focus {
 
 .header {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 .header__container {
   display: grid;
@@ -554,6 +554,15 @@ input:focus {
 .controls {
     height: 350px;
   }
+  .control-pause {
+    font-size: 13vh;
+  }
+  .control-prev {
+    font-size: 13vh;
+  }
+  .control-next {
+    font-size: 13vh;
+  }
   .header {
     margin-bottom: -10px;
   }
@@ -564,7 +573,7 @@ input:focus {
     padding-left: 0;
   }
   .header-navbar__item {
-    margin-left: 0px;
-    padding: 0px 10px;
+    margin-left: 0;
+    padding: 0 10px;
   }
 }

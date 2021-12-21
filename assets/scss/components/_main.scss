@@ -113,6 +113,9 @@
   user-select: none;
 
   &-pause {
+    @include sm {
+      font-size: 13vh;
+    }
     position: absolute;
     top: 50%;
     left: 50%;
@@ -129,6 +132,9 @@
     }
   }
   &-prev {
+    @include sm {
+      font-size: 13vh;
+    }
     position: absolute;
     top: 50%;
     left: 3%;
@@ -145,6 +151,9 @@
     }
   }
   &-next {
+    @include sm {
+      font-size: 13vh;
+    }
     position: absolute;
     top: 50%;
     right: 3%;

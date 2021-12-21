@@ -3,7 +3,7 @@
 .header {
   position: relative;
 
-  margin-bottom: $gap-lg;
+  margin-bottom: $gap-sm;
 
   @include sm {
     margin-bottom: -$gap-sm;

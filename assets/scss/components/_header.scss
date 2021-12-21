@@ -6,7 +6,7 @@
   margin-bottom: $gap-lg;
 
   @include sm {
-    margin-bottom: $gap-sm;
+    margin-bottom: -$gap-sm;
   }
   &__container {
     display: grid;
@@ -41,6 +41,11 @@
 
     &__item {
       margin-left: 30px;
+
+      @include sm {
+        margin-left: 0;
+        padding: 0 10px;
+      }
     }
     &__link {
       position: relative;

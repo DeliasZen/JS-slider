@@ -246,7 +246,7 @@ input:focus {
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 20px 20px 15px;
+  padding: 10px 20px 15px;
   background-color: #0a2549;
 }
 .footer__social {
@@ -255,7 +255,7 @@ input:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   grid-template-columns: repeat(auto-fit, minmax(50px, -webkit-max-content));
   grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
 }
@@ -307,6 +307,31 @@ input:focus {
   background-color: rgba(0, 0, 0, 0.3);
   text-shadow: 1px 2px #000000;
   font-family: "Roboto", sans-serif;
+}
+
+.slide:nth-of-type(1) {
+  background-position: center;
+  background-size: cover;
+}
+
+.slide:nth-of-type(2) {
+  background-position: center;
+  background-size: cover;
+}
+
+.slide:nth-of-type(3) {
+  background-position: center;
+  background-size: cover;
+}
+
+.slide:nth-of-type(4) {
+  background-position: center;
+  background-size: cover;
+}
+
+.slide:nth-of-type(5) {
+  background-position: center;
+  background-size: cover;
 }
 
 .active {
@@ -523,19 +548,23 @@ input:focus {
     font-size: 1.5rem;
   }
   .slides {
-    height: 500px;
+    height: 350px;
   }
   .indicators,
 .controls {
-    height: 500px;
+    height: 350px;
   }
   .header {
-    margin-bottom: 10px;
+    margin-bottom: -10px;
   }
   .header-navbar__list {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     padding-left: 0;
+  }
+  .header-navbar__item {
+    margin-left: 0px;
+    padding: 0px 10px;
   }
 }

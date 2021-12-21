@@ -5,7 +5,7 @@
   bottom: 0;
 
   width: 100%;
-  padding: 20px 20px 15px;
+  padding: 10px 20px 15px;
 
   background-color: darken($color-blue, 33);
   &__container {
@@ -17,7 +17,7 @@
     display: grid;
     justify-content: center;
 
-    margin-bottom: $gap;
+    margin-bottom: $gap-sm;
 
     grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
     & a {

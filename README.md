@@ -1,1 +1,1 @@
-# JS-HomeWork
+# JS-Slider

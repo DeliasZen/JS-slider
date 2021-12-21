@@ -1,0 +1,40 @@
+@use "../common" as *;
+
+.footer {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  padding: 20px 20px 15px;
+
+  background-color: darken($color-blue, 33);
+  &__container {
+    @extend %container;
+  }
+  &__social {
+    position: relative;
+
+    display: grid;
+    justify-content: center;
+
+    margin-bottom: $gap;
+
+    grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+    & a {
+      display: block;
+
+      padding: $gap-sm;
+    }
+    .fab {
+      font-size: 36px;
+    }
+  }
+  &__copy {
+    text-align: center;
+
+    color: $color-light;
+
+    font-family: $font-header;
+    font-size: $font-size * 1.3;
+  }
+}

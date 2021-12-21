@@ -1,0 +1,168 @@
+@use "../common" as *;
+
+.main {
+  // position: absolute;
+  &__container {
+    @extend %container;
+  }
+}
+
+.slides {
+  position: absolute;
+
+  width: 100%;
+  height: 550px;
+  list-style: none;
+
+  @include sm {
+    height: 500px;
+  }
+}
+
+.slide {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+
+  transition: opacity 1s;
+
+  opacity: 0;
+
+  font-size: 40px;
+  &__subtitle {
+    margin: 0 30%;
+    user-select: none;
+
+    text-align: center;
+
+    color: $color-light;
+    border-radius: 0 0 50% 50%;
+    background-color: rgba($color: #000000, $alpha: 0.3);
+    text-shadow: 1px 2px $color-black;
+
+    font-family: $font-main;
+  }
+}
+
+.active {
+  z-index: 1;
+
+  opacity: 1;
+}
+
+.indicators,
+.controls {
+  position: absolute;
+
+  width: 100%;
+  height: 550px;
+
+  @include sm {
+    height: 500px;
+  }
+}
+.indicators {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  gap: 1em;
+}
+
+.carousel {
+  position: relative;
+}
+
+.control {
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 50px;
+
+  cursor: pointer;
+  user-select: none;
+
+  &-pause {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transition: 2s;
+
+    color: $color-light;
+    color: rgba($color: $color-light, $alpha: 0.1);
+
+    font-size: 26vh;
+    &:hover,
+    :focus {
+      color: $color-light;
+    }
+  }
+  &-prev {
+    position: absolute;
+    top: 50%;
+    left: 3%;
+
+    transition: 2s;
+
+    color: $color-light;
+    color: rgba($color: $color-light, $alpha: 0.1);
+
+    font-size: 13vh;
+    &:hover,
+    :focus {
+      color: $color-light;
+    }
+  }
+  &-next {
+    position: absolute;
+    top: 50%;
+    right: 3%;
+
+    transition: 2s;
+
+    color: $color-light;
+    color: rgba($color: $color-light, $alpha: 0.1);
+
+    font-size: 13vh;
+    &:hover,
+    :focus {
+      color: $color-light;
+    }
+  }
+}
+
+.indicator {
+  z-index: 5;
+
+  display: block;
+
+  width: 30px;
+  height: 6px;
+  margin-bottom: 8px;
+
+  cursor: pointer;
+  user-select: none;
+
+  background-color: rgba($color: #ffffff, $alpha: 0.5);
+}
+
+.indicator.active {
+  background-color: $color-light;
+}
+
+.control-pause {
+  & > span {
+    position: absolute;
+
+    opacity: 0;
+  }
+}

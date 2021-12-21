@@ -1,12 +1,10 @@
-const slides = document.querySelectorAll('.slide');
+import SwipeCarousel from './swipe-carousel.js';
 
-let currentSlide = 0;
+const carousel = new SwipeCarousel({
+  containerID: '#carousel',
+  slideID: '.slide',
+  interval: 2000,
+  isPlaying: true
+});
 
-function nextSlide() {
-  slides[currentSlide].className = 'slide';
-  if (currentSlide < slides.length)
-    currentSlide++;
-  slides[currentSlide].className = 'slide active';
-};
-
-setInterval(nextSlide, 2000);
+carousel.init();

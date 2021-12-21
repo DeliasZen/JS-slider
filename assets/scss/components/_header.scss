@@ -1,0 +1,81 @@
+@use "../common" as *;
+
+.header {
+  position: relative;
+
+  margin-bottom: $gap-lg;
+
+  @include sm {
+    margin-bottom: $gap-sm;
+  }
+  &__container {
+    display: grid;
+    align-items: end;
+
+    @extend %container;
+    @include sm-min {
+      grid-template-columns: auto 1fr;
+    }
+    justify-items: center;
+  }
+  &-logo {
+    margin-top: 10px;
+    &__img {
+      width: 100px;
+    }
+  }
+  &-navbar {
+    width: 100%;
+    &__list {
+      display: flex;
+      justify-content: flex-end;
+
+      list-style: none;
+
+      @include sm {
+        justify-content: center;
+
+        padding-left: 0;
+      }
+    }
+
+    &__item {
+      margin-left: 30px;
+    }
+    &__link {
+      position: relative;
+
+      padding: 10px 8px;
+
+      text-decoration: none;
+
+      color: $color-black;
+
+      font-family: $font-header;
+      font-size: 24px;
+      &::after {
+        position: absolute;
+        bottom: -5px;
+
+        height: 3px;
+
+        content: "";
+        transition: bottom 0.8s, opacity 0.8s;
+
+        opacity: 0;
+        background-color: black;
+      }
+      &:hover,
+      &:focus {
+        &::after {
+          bottom: 5px;
+          left: 0;
+
+          width: 100%;
+
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
